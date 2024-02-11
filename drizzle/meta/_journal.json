@@ -1,0 +1,20 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1707592283262,
+      "tag": "0000_flat_xavin",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1707592726424,
+      "tag": "0001_easy_wrecking_crew",
+      "breakpoints": true
+    }
+  ]
+}

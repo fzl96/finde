@@ -1,0 +1,1 @@
+ALTER TABLE "laptop" ADD COLUMN "berat" integer;
