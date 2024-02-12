@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS "detail" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"merek" text,
+	"background" text,
+	"infosingkat1" text,
+	"slogan1" text,
+	"infoslogan1" text,
+	"slogan2" text,
+	"infoslogan2" text,
+	"slogan3" text,
+	"infoslogan3" text,
+	"slogan4" text,
+	"infoslogan4" text,
+	"harga" varchar(50),
+	"gambar" varchar(256),
+	"processor" varchar(256),
+	"gpu" varchar(256),
+	"ram" varchar(256),
+	"penyimpanan" varchar(256),
+	"display" varchar(256),
+	"berat" varchar(50)
+);

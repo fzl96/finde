@@ -2,7 +2,7 @@ import "dotenv/config";
 import { drizzle } from "drizzle-orm/postgres-js";
 import * as schema from "@/db/schema";
 import { eq, and, desc } from "drizzle-orm";
-import { laptops } from "@/db/schema";
+import { laptops, detail } from "@/db/schema";
 import postgres from "postgres";
 
 const connectionString = process.env.DB_URL!;
@@ -35,6 +35,12 @@ export async function getLaptop({
     )
     .orderBy(desc(laptops.bobot))
     .limit(1);
+
+  return result;
+}
+
+export async function getDetail(id: number) {
+  const result = await db.select().from(detail).where(eq(detail.id, id));
 
   return result;
 }

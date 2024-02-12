@@ -1,0 +1,233 @@
+{
+  "id": "eccfe73c-593a-405a-92d5-509972e0f698",
+  "prevId": "80e8be14-fabf-43da-a173-9f10aa15c692",
+  "version": "5",
+  "dialect": "pg",
+  "tables": {
+    "detail": {
+      "name": "detail",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "merek": {
+          "name": "merek",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "background": {
+          "name": "background",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "infosingkat1": {
+          "name": "infosingkat1",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "slogan1": {
+          "name": "slogan1",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "infoslogan1": {
+          "name": "infoslogan1",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "slogan2": {
+          "name": "slogan2",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "infoslogan2": {
+          "name": "infoslogan2",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "slogan3": {
+          "name": "slogan3",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "infoslogan3": {
+          "name": "infoslogan3",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "slogan4": {
+          "name": "slogan4",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "infoslogan4": {
+          "name": "infoslogan4",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "harga": {
+          "name": "harga",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "gambar": {
+          "name": "gambar",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "processor": {
+          "name": "processor",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "gpu": {
+          "name": "gpu",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ram": {
+          "name": "ram",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "penyimpanan": {
+          "name": "penyimpanan",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "display": {
+          "name": "display",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "berat": {
+          "name": "berat",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "laptop": {
+      "name": "laptop",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "merek": {
+          "name": "merek",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cpu": {
+          "name": "cpu",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "gpu": {
+          "name": "gpu",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "harga": {
+          "name": "harga",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ram": {
+          "name": "ram",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "berat": {
+          "name": "berat",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "gambar": {
+          "name": "gambar",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pekerjaan": {
+          "name": "pekerjaan",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "penggunaan": {
+          "name": "penggunaan",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "jenis_laptop": {
+          "name": "jenis_laptop",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "processor": {
+          "name": "processor",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "bobot": {
+          "name": "bobot",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
