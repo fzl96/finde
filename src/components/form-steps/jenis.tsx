@@ -10,7 +10,7 @@ const options = [
     label: "Tradisional",
     imgSrc: "traditional.svg",
     occupations: ["mahasiswa", "pekerja-kantoran", "professional"],
-    usage: ["daily-use", "multimedia", "gaming", "office"],
+    usage: ["daily-use", "multimedia", "gaming"],
   },
   {
     id: "2in1-laptop",
