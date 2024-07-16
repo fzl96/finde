@@ -1,10 +1,12 @@
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 import Image from "next/image";
 import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
-    <MaxWidthWrapper className="mb-12 mt-20 flex flex-col items-center justify-center text-center">
+    <MaxWidthWrapper className="min-h-screen mb-40 mt-20 flex flex-col items-center justify-center text-center">
       <div className="mb-10 flex flex-col gap-12 items-center">
         <h1 className="scroll-m-20 text-4xl font-semibold tracking-tight lg:text-6xl">
           Temukan{" "}
@@ -21,10 +23,14 @@ export default function Home() {
           dari pelajar, pekerja kantoran, hingga gamer.
         </h2>
         <div className="flex-basis:auto w-fit">
-          <Link href="/find">
-            <p className="text-base rounded-full px-7 py-3 font-semibold shadow-glow bg-white text-black">
-              Cari Laptop
-            </p>
+          <Link
+            href="/find"
+            className={cn(
+              buttonVariants({ variant: "default" }),
+              "rounded-2xl font-medium"
+            )}
+          >
+            Cari Laptop
           </Link>
         </div>
       </div>
@@ -39,7 +45,7 @@ export default function Home() {
         id="about"
         className="mt-20 flex flex-col justify-center items-center space-y-10 md:px-0 px-7"
       >
-        <p className="scroll-m-20 pb-2 md:text-3xl text-xl font-semibold tracking-tight first:mt-0 text-left max-w-4xl leading-7 [&:not(:first-child)]:mt-6">
+        <p className="scroll-m-20 pb-2 md:text-3xl text-xl font-medium tracking-tight first:mt-0 text-left max-w-4xl leading-7 [&:not(:first-child)]:mt-6">
           Finde hadir untuk menyederhanakan proses mencari laptop serta
           memberikan panduan yang informatif
         </p>

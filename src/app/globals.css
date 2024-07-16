@@ -1,24 +1,104 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
+  @tailwind components;
+  @tailwind utilities;
 
-:root {
-  color-scheme: dark;
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+  @layer base {
+   :root {
+    --background: 210, 40%, 98%;
+    --foreground: 217 33% 17%;
+    --foreground-soft: 217 10% 35%;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --card: 0 0% 100%;
+    --card-hover: 0 0% 98%;
+    --card-border: 214.3 31.8% 91.4%;
+    --card-selected-border: 0 0% 15%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 0 0% 98%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 217 8% 54%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --icon: 222.2 84% 4.9%;
+
+    --nav-background: 0 0% 10%;
+    --nav-foreground: 0 0% 85%;
+    
+    --radius: 0.5rem;
+
+    --footer: 0 0% 100%;
+    --footer-foreground: 0 0% 10%;
+    --footer-border: 0 0% 85%;
+  }
+
+  .dark {
+    --background: 0 0% 10%;
+    --foreground: 0 0% 85%;
+    --foreground-soft: 0 0% 75%;
+
+    --card: 0 0% 13%;
+    --card-hover: 0 0% 16%;
+    --card-border: 0 0% 18%;
+    --card-selected-border: 0 0% 85%;
+    --card-foreground: 0 0% 85%;
+
+    --popover: 0 0% 13%;
+    --popover-foreground: 0 0% 85%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 0 0% 13%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 35%;
+
+    --accent: 0 0% 15%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 20%;
+    --ring: 0 0% 25%;
+
+    --icon: 0 0% 50%;
+
+    --nav-background: 33 91% 96%;
+    --nav-foreground: 222.2 84% 4.9%;
+    
+    --radius: 0.5rem;
+    
+    --footer: 0 0% 13%;
+    --footer-foreground: 0 0% 85%;
+    --footer-border: 0 0% 13%;
   }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  @layer base {
+    * {
+      @apply border-border;
+    }
+    body {
+      @apply bg-background text-foreground;
+    }
   }
-}

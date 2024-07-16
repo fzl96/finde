@@ -20,6 +20,11 @@ const options = [
     label: "Professional",
     imgSrc: "pro.svg",
   },
+  {
+    id: "others",
+    label: "Lainnya",
+    imgSrc: "job.svg",
+  },
 ];
 
 export function Pekerjaan() {
@@ -40,7 +45,7 @@ export function Pekerjaan() {
         <h1 className="text-left scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
           Pilih Pekerjaan
         </h1>
-        <h2 className="text-[#b8c0e0] text-left scroll-m-20 text-lg tracking-tight">
+        <h2 className="text-foreground-soft text-left scroll-m-20 text-lg tracking-tight">
           Pilih pekerjaan yang paling sesuai dengan anda
         </h2>
       </motion.div>
@@ -49,7 +54,7 @@ export function Pekerjaan() {
         animate={{ opacity: 1, x: 0 }}
         // transition={{ delay: 0.3 }}
         exit={{ opacity: 0, x: 20 }}
-        className="flex md:flex-row flex-col gap-5"
+        className="grid grid-cols-1 md:grid-cols-2 gap-5"
       >
         {options.map((option) => (
           <RadioCard

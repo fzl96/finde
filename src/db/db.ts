@@ -22,7 +22,7 @@ export async function getLaptop({
   jenis_laptop: string;
   processor: string;
 }) {
-  const result = await db
+  const [result] = await db
     .select()
     .from(laptops)
     .where(

@@ -10,6 +10,7 @@ import { Penggunaan } from "@/components/form-steps/penggunaan";
 import { Jenis } from "@/components/form-steps/jenis";
 import { Processor } from "@/components/form-steps/processor";
 import { canNextStep, cn } from "@/lib/utils";
+import { Button, buttonVariants } from "./ui/button";
 
 export function FindForm() {
   const searchParams = useSearchParams();
@@ -33,36 +34,40 @@ export function FindForm() {
       <div className="px-5 md:px-0">{step}</div>
       <div className="flex gap-2 items-center float-end px-5 md:px-0">
         {!first && (
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={prevStep}
-            className="px-4 py-2 rounded-lg bg-[#181825] border-2 border-[#181825] hover:border-[#f0c6c6]
-        "
-          >
-            Back
-          </motion.button>
+          <Button onClick={prevStep}>Back</Button>
+          //   <motion.button
+          //     whileHover={{ scale: 1.1 }}
+          //     whileTap={{ scale: 0.9 }}
+          //     onClick={prevStep}
+          //     className="px-4 py-2 rounded-lg ] border-2 border-[#181825] hover:border-[#f0c6c6]
+          // "
+          //   >
+          //     Back
+          //   </motion.button>
         )}
         {!last && (
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={nextStep}
-            disabled={disabled}
-            className={cn(
-              "px-4 py-2 rounded-lg bg-[#181825] border-2 border-[#181825] hover:border-[#f0c6c6]",
-              disabled && "opacity-50 hover:border-none"
-            )}
-          >
+          <Button onClick={nextStep} disabled={disabled}>
             Next
-          </motion.button>
+          </Button>
+          // <motion.button
+          //   whileHover={{ scale: 1.1 }}
+          //   whileTap={{ scale: 0.9 }}
+          //   onClick={nextStep}
+          //   disabled={disabled}
+          //   className={cn(
+          //     "px-4 py-2 rounded-lg bg-[#181825] border-2 border-[#181825] hover:border-[#f0c6c6]",
+          //     disabled && "opacity-50 hover:border-none"
+          //   )}
+          // >
+          //   Next
+          // </motion.button>
         )}
         {last && (
           <Link
             href={disabled ? "#" : `/find/result?${params.toString()}`}
             className={cn(
               disabled && "opacity-50",
-              "px-4 py-2 rounded-lg bg-[#f2cdcd] text-[#181825] border-2 border-[#181825] hover:border-[#f0c6c6]"
+              buttonVariants({ variant: "default" })
             )}
           >
             Submit

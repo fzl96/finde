@@ -3,6 +3,7 @@
 import { cn, getLinks } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { buttonVariants } from "./ui/button";
 
 interface FindResultProps {
   laptop: {
@@ -19,7 +20,7 @@ interface FindResultProps {
     jenis_laptop: string | null;
     processor: string | null;
     bobot: number | null;
-  }[];
+  };
   detail: any;
 }
 
@@ -51,15 +52,15 @@ const specifications = [
 ];
 
 export function FindResult({ laptop, detail }: FindResultProps) {
-  const links = getLinks(laptop[0].merek || "");
+  const links = getLinks(laptop.merek || "");
   return (
     <div className="p-5 rounded-xl mt-5 space-y-10">
-      <div className="flex md:flex-row flex-col gap-5">
-        {laptop[0]?.gambar && (
+      <div className="flex md:flex-row flex-col gap-5 flex-start">
+        {laptop?.gambar && (
           <Image
-            src={`/${laptop[0].gambar}` || ""}
-            alt={laptop[0].merek || ""}
-            className="h-[18rem] rounded-lg"
+            src={`/${laptop.gambar}` || ""}
+            alt={laptop.merek || ""}
+            className="h-[18rem] rounded-lg md:sticky md:top-20"
             width={300}
             height={288}
           />
@@ -67,12 +68,12 @@ export function FindResult({ laptop, detail }: FindResultProps) {
         <div className="flex flex-col items-start max-w-2xl">
           <div className="text-left space-y-4">
             <h1 className="scroll-m-20 text-4xl font-semibold tracking-tight lg:text-5xl">
-              {laptop[0].merek || ""}
+              {laptop.merek || ""}
             </h1>
-            <p className="scroll-m-20 text-lg font-semibold tracking-tight text-[#cad3f5]">
+            <p className="scroll-m-20 text-lg font-semibold tracking-tight text-foreground-soft">
               {detail.length && detail[0].processor}
             </p>
-            <p className="scroll-m-20 text-lg font-semibold tracking-tight text-[#cad3f5]">
+            <p className="scroll-m-20 text-lg font-semibold tracking-tight text-foreground-soft">
               {detail.length && detail[0].gpu}
             </p>
 
@@ -98,7 +99,7 @@ export function FindResult({ laptop, detail }: FindResultProps) {
                 ))}
               </div>
             </div>
-            <p className="leading-7 [&:not(:first-child)]:mt-6 text-left text-[#cad3f5]">
+            <p className="leading-7 [&:not(:first-child)]:mt-6 text-left text-foreground-soft">
               {(detail.length && detail[0].infosingkat1) || ""}
             </p>
           </div>
@@ -107,7 +108,7 @@ export function FindResult({ laptop, detail }: FindResultProps) {
               <h2 className="scroll-m-20 text-xl font-semibold tracking-tight">
                 {(detail.length && detail[0].slogan1) || ""}
               </h2>
-              <p className="leading-7 [&:not(:first-child)]:mt-6 text-left text-[#cad3f5]">
+              <p className="leading-7 [&:not(:first-child)]:mt-6 text-left text-foreground-soft">
                 {(detail.length && detail[0].infoslogan1) || ""}
               </p>
             </div>
@@ -115,7 +116,7 @@ export function FindResult({ laptop, detail }: FindResultProps) {
               <h2 className="scroll-m-20 text-xl font-semibold tracking-tight">
                 {(detail.length && detail[0].slogan2) || ""}
               </h2>
-              <p className="leading-7 [&:not(:first-child)]:mt-6 text-left text-[#cad3f5]">
+              <p className="leading-7 [&:not(:first-child)]:mt-6 text-left text-foreground-soft">
                 {(detail.length && detail[0].infoslogan2) || ""}
               </p>
             </div>
@@ -123,7 +124,7 @@ export function FindResult({ laptop, detail }: FindResultProps) {
               <h2 className="scroll-m-20 text-xl font-semibold tracking-tight">
                 {(detail.length && detail[0].slogan3) || ""}
               </h2>
-              <p className="leading-7 [&:not(:first-child)]:mt-6 text-left text-[#cad3f5]">
+              <p className="leading-7 [&:not(:first-child)]:mt-6 text-left text-foreground-soft">
                 {(detail.length && detail[0].infoslogan3) || ""}
               </p>
             </div>
@@ -131,14 +132,17 @@ export function FindResult({ laptop, detail }: FindResultProps) {
               <h2 className="scroll-m-20 text-xl font-semibold tracking-tight">
                 {(detail.length && detail[0].slogan4) || ""}
               </h2>
-              <p className="leading-7 [&:not(:first-child)]:mt-6 text-left text-[#cad3f5]">
+              <p className="leading-7 [&:not(:first-child)]:mt-6 text-left text-foreground-soft">
                 {(detail.length && detail[0].infoslogan4) || ""}
               </p>
             </div>
           </div>
           <ul className="list-disc md:pl-[1.1rem] pl-5">
             {specifications.map((spec) => (
-              <li key={spec.value} className="text-[#cad3f5] text-left text-lg">
+              <li
+                key={spec.value}
+                className="text-foreground text-left text-lg"
+              >
                 <span className="font-semibold">{spec.title}:</span>{" "}
                 {detail.length && detail[0][spec.value]}
               </li>
@@ -147,10 +151,7 @@ export function FindResult({ laptop, detail }: FindResultProps) {
         </div>
       </div>
       <div className="flex items-center gap-2 float-end">
-        <Link
-          href="/find"
-          className="px-4 py-2 rounded-lg bg-[#f2cdcd] text-[#181825] text-sm font-semibold"
-        >
+        <Link href="/find" className={buttonVariants({ variant: "default" })}>
           Cari Ulang
         </Link>
       </div>

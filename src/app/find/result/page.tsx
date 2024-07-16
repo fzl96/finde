@@ -25,17 +25,11 @@ export default async function Result({
     return <div>Kosong</div>;
   }
   const laptop = await getLaptop(searchParams);
-  const detail = await getDetail(laptop[0].id);
 
-  return (
-    <MaxWidthWrapper className="mb-[15rem] md:mt-20 flex flex-col items-center justify-center text-center md:px-0 px-5">
-      {/* <h1 className="md:text-left scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0 text-center">
-        Laptop yang cocok untuk anda
-      </h1> */}
-      {laptop.length ? (
-        <FindResult laptop={laptop} detail={detail} />
-      ) : (
-        <div>
+  if (!laptop) {
+    return (
+      <div className="mx-auto w-full max-w-screen-2xl mb-[15rem] md:mt-20 flex flex-col items-center justify-center text-center md:px-0 px-5">
+        <div className="space-y-4">
           <Link href="/find">
             <Image
               src="/assets/not-found.svg"
@@ -48,7 +42,22 @@ export default async function Result({
             Laptop tidak ditemukan
           </h1>
         </div>
-      )}
+      </div>
+    );
+  }
+
+  const detail = await getDetail(laptop.id);
+
+  return (
+    <MaxWidthWrapper className="mb-[15rem] md:mt-20 flex flex-col items-center justify-center text-center md:px-0 px-5">
+      {/* <h1 className="md:text-left scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0 text-center">
+        Laptop yang cocok untuk anda
+      </h1> */}
+      {laptop && <FindResult laptop={laptop} detail={detail} />}
+      {/* {laptop.length ? (
+      ) : ( */}
+
+      {/* )} */}
     </MaxWidthWrapper>
   );
 }

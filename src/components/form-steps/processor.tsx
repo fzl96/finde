@@ -35,7 +35,7 @@ export function Processor() {
         <h1 className="text-left scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
           Pilih Processor
         </h1>
-        <h2 className="text-[#b8c0e0] text-left scroll-m-20 text-lg tracking-tight">
+        <h2 className="text-foreground-soft text-left scroll-m-20 text-lg tracking-tight">
           Pilih brand processor yang anda inginkan
         </h2>
       </motion.div>

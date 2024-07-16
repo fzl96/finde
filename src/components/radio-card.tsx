@@ -21,8 +21,8 @@ export function RadioCard({
     <motion.label
       whileHover={{ scale: 1.02 }}
       htmlFor={id}
-      className={`bg-[#181825] relative cursor-pointer flex-1 p-4 rounded-lg ${
-        selected ? "border-2 border-[#f0c6c6]" : "border-2 border-[#181825]"
+      className={`bg-card relative cursor-pointer flex-1 p-4 rounded-lg ${
+        selected ? "border-2 border-card-selected-border" : "border-2"
       }`}
     >
       <input

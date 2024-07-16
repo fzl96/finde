@@ -9,21 +9,21 @@ const options = [
     id: "traditional",
     label: "Tradisional",
     imgSrc: "traditional.svg",
-    occupations: ["mahasiswa", "pekerja-kantoran", "professional"],
+    occupations: ["mahasiswa", "pekerja-kantoran", "professional", "others"],
     usage: ["daily-use", "multimedia", "gaming"],
   },
   {
     id: "2in1-laptop",
     label: "2-in-1 Laptop",
     imgSrc: "2in1.svg",
-    occupations: ["mahasiswa", "professional"],
+    occupations: ["mahasiswa", "professional", "others"],
     usage: ["multimedia"],
   },
   {
     id: "special-laptop",
     label: "Special Laptop",
     imgSrc: "special.svg",
-    occupations: ["pekerja-kantoran", "professional"],
+    occupations: ["pekerja-kantoran", "professional", "others"],
     usage: ["multimedia", "office"],
   },
 ];
@@ -46,7 +46,7 @@ export function Jenis() {
         <h1 className="text-left scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
           Pilih Jenis Laptop
         </h1>
-        <h2 className="text-[#b8c0e0] text-left scroll-m-20 text-lg tracking-tight">
+        <h2 className="text-foreground-soft text-left scroll-m-20 text-lg tracking-tight">
           Pilih jenis laptop yang paling sesuai dengan penggunaan anda
         </h2>
       </motion.div>
