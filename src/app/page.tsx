@@ -43,7 +43,7 @@ export default function Home() {
       />
       <section
         id="about"
-        className="mt-20 flex flex-col justify-center items-center space-y-10 md:px-0 px-7"
+        className="mt-24 flex flex-col justify-center items-center space-y-10 md:px-0 px-7"
       >
         <p className="scroll-m-20 pb-2 md:text-3xl text-xl font-medium tracking-tight first:mt-0 text-left max-w-4xl leading-7 [&:not(:first-child)]:mt-6">
           Finde hadir untuk menyederhanakan proses mencari laptop serta
